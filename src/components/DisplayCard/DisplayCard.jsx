@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import "./DisplayCard.css";
 
 const DisplayCard = (props) => {
@@ -22,11 +24,16 @@ const DisplayCard = (props) => {
             <p className="card-title text-xl font-bold">{authorName}</p>
             <p className="release-date">{releaseDate}</p>
             </div>
-          <p className="read-time text-right font-bold">{readTime}</p>
+          <p className="read-time text-right font-bold">
+            {readTime}
+            <FontAwesomeIcon icon={faBookmark} className='ms-2 text-2xl'></FontAwesomeIcon>
+            </p>
           </div>
           <h1 className="text-3xl font-bold">{title}</h1>
           <div className="card-actions justify-end">
-            <p className="mark-read font-bold underline pointer">Mark as read</p>
+            <p className="mark-read font-bold underline pointer">
+                Mark as read
+                </p>
           </div>
         </div>
       </div>
