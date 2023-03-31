@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import DisplayCard from "../DisplayCard/DisplayCard";
 import "./Cards.css";
 
 const Cards = () => {
@@ -13,12 +14,12 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="card">
-      <div className="container mx-auto">
+    <div className="card mt-5">
+      <div className="container mx-auto p-5">
         <div className="main-card">
+
           <div className="left-cart">
-            <h1>left</h1>
-            {users.map((user) => setUsers(user))}
+            {users.map((user) => <DisplayCard user={user} key={user.id}></DisplayCard>)}
           </div>
 
           <div className="right-card">

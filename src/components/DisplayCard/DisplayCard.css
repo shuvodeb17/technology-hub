@@ -1,0 +1,17 @@
+.author-details{
+    display: flex;
+    align-items: center;
+}
+.release-date {
+  color: #787878;
+}
+.cover-image {
+  width: 100%;
+}
+.mark-read{
+    color: #6047EC;
+    cursor: pointer;
+}
+.read-time{
+    color: rgba(17, 17, 17, 0.6);
+}

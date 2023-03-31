@@ -5,7 +5,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header">
-      <div className="container mx-auto">
+      <div className="container mx-auto p-5">
         <div className="navbar bg-base-100">
           <div className="flex-1">
             <a className="font-bold text-3xl">Technology Hub</a>
@@ -50,6 +50,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+      <hr />
       </div>
     </div>
   );
