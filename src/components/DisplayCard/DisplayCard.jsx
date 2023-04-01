@@ -28,7 +28,8 @@ const DisplayCard = (props) => {
               {readTime}
               <FontAwesomeIcon
                 icon={faBookmark}
-                className="ms-2 text-2xl"
+                className="bookmark-button ms-2 text-2xl"
+                onClick={() => props.bookmarkBtn(props.user)}
               ></FontAwesomeIcon>
             </p>
           </div>

@@ -9,3 +9,18 @@
 .spent-body{
     padding: 14px;
 }
+.mark-read {
+  color: #6047ec;
+  cursor: pointer;
+}
+.read-time {
+  color: rgba(17, 17, 17, 0.6);
+}
+.bookmark-button {
+  cursor: pointer;
+}
+.bookmark {
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+}
+

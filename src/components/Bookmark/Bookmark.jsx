@@ -1,7 +1,10 @@
 import React from "react";
+import DisplayBookmark from "../DisplayBookmark/DisplayBookmark";
 import "./Bookmark.css";
 
 const Bookmark = (props) => {
+  const { bookmarked } = props;
+
   return (
     <div className="bookmark-wrapper">
       {/* Spent time */}
@@ -12,6 +15,10 @@ const Bookmark = (props) => {
           </h2>
         </div>
       </div>
+
+      <h1 className="text-2xl font-bold mt-5">Bookmarked Blogs : {bookmarked.length}</h1>
+
+      {bookmarked.map((bookmark) => <DisplayBookmark bookmark={bookmark}></DisplayBookmark>)}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import "./Cards.css";
 const Cards = () => {
   const [users, setUsers] = useState([]);
   const [readTime, setReadTime] = useState(0);
+  const [bookmarked, setBookmarked] = useState([]);
 
   useEffect(() => {
     fetch("data.json")
@@ -22,6 +23,13 @@ const Cards = () => {
     setReadTime(sum);
   };
 
+  // bookmark button
+  const bookmarkBtn = (userDetails) => {
+    const bookmark = [...bookmarked, userDetails];
+    setBookmarked(bookmark);
+  };
+  console.log(bookmarked);
+
   return (
     <div className="card mt-5">
       <div className="container mx-auto p-5">
@@ -32,12 +40,13 @@ const Cards = () => {
                 user={user}
                 key={user.id}
                 markReadBtn={markReadBtn}
+                bookmarkBtn={bookmarkBtn}
               ></DisplayCard>
             ))}
           </div>
 
           <div className="right-card">
-            <Bookmark readTime={readTime}></Bookmark>
+            <Bookmark readTime={readTime} bookmarked={bookmarked}></Bookmark>
           </div>
         </div>
       </div>
