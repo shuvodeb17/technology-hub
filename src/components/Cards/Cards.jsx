@@ -4,6 +4,8 @@ import { useState } from "react";
 import Bookmark from "../Bookmark/Bookmark";
 import DisplayCard from "../DisplayCard/DisplayCard";
 import "./Cards.css";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Cards = () => {
   const [users, setUsers] = useState([]);
@@ -29,7 +31,7 @@ const Cards = () => {
       (bookmark) => bookmark.id === userDetails.id
     );
     if (exists) {
-      alert("added");
+       toast("Already added");
     } else {
       const bookmark = [...bookmarked, userDetails];
       setBookmarked(bookmark);
