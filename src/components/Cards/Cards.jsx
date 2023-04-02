@@ -25,10 +25,16 @@ const Cards = () => {
 
   // bookmark button
   const bookmarkBtn = (userDetails) => {
-    const bookmark = [...bookmarked, userDetails];
-    setBookmarked(bookmark);
+    const exists = bookmarked.find(
+      (bookmark) => bookmark.id === userDetails.id
+    );
+    if (exists) {
+      alert("added");
+    } else {
+      const bookmark = [...bookmarked, userDetails];
+      setBookmarked(bookmark);
+    }
   };
-  console.log(bookmarked);
 
   return (
     <div className="card mt-5">

@@ -16,9 +16,16 @@ const Bookmark = (props) => {
         </div>
       </div>
 
-      <h1 className="text-2xl font-bold mt-5">Bookmarked Blogs : {bookmarked.length}</h1>
+      <h1 className="text-2xl font-bold mt-5">
+        Bookmarked Blogs : {bookmarked.length}
+      </h1>
 
-      {bookmarked.map((bookmark) => <DisplayBookmark bookmark={bookmark}></DisplayBookmark>)}
+      {bookmarked.map((bookmark) => (
+        <DisplayBookmark
+          bookmark={bookmark}
+          key={bookmark.id}
+        ></DisplayBookmark>
+      ))}
     </div>
   );
 };
