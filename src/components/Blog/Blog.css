@@ -1,0 +1,10 @@
+.all-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px;
+}
+@media screen and (max-width: 768px) {
+  .all-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
